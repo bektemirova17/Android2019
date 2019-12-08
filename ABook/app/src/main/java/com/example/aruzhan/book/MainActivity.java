@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,5 +30,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public void ChangeFragment(View view) {
+        Fragment fragment;
+
+        if (view == findViewById(R.id.button)) {
+            fragment = new FirstFragment();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.fragment_place, fragment);
+            ft.commit();
+        }
+        if (view == findViewById(R.id.button2)) {
+            fragment = new SecondFragment();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.fragment_place, fragment);
+            ft.commit();
+        }
     }
 }
