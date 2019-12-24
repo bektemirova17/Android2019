@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.example.aruzhan.book.MainActivity">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FD000000"
+        android:text="Something"
+        android:textColor="#F5F1F1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -53,4 +68,5 @@
         android:layout_height="match_parent"
 
         ></fragment>
+
 </LinearLayout>
